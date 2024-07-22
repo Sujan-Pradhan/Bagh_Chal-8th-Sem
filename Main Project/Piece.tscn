@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Images/goat.png" type="Texture" id=1]
+[ext_resource path="res://Images/tiger.jpg" type="Texture" id=2]
+[ext_resource path="res://Main Project/Piece.gd" type="Script" id=3]
+
+[node name="Piece" type="Node2D"]
+scale = Vector2( 0.05, 0.05 )
+script = ExtResource( 3 )
+
+[node name="Tiger" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 2 )
+
+[node name="Goat" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 1 )

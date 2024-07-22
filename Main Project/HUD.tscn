@@ -1,0 +1,248 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Images/backgroud.jpg" type="Texture" id=1]
+[ext_resource path="res://Images/goat.png" type="Texture" id=2]
+[ext_resource path="res://Images/Tiger.png" type="Texture" id=3]
+[ext_resource path="res://Images/computer.png" type="Texture" id=4]
+[ext_resource path="res://Images/human.png" type="Texture" id=5]
+[ext_resource path="res://Main Project/HUD.gd" type="Script" id=6]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.156863, 0.156863, 0.156863, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.156863, 0.156863, 0.156863, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="HUD" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="Background" type="TextureRect" parent="."]
+margin_left = -1.0
+margin_right = 1023.0
+margin_bottom = 928.0
+rect_scale = Vector2( 0.187, 0.75 )
+texture = ExtResource( 1 )
+stretch_mode = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Message" type="Label" parent="."]
+visible = false
+margin_left = 24.0
+margin_top = 112.0
+margin_right = 120.0
+margin_bottom = 126.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "White Wins!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+margin_left = 27.0
+margin_top = 24.0
+margin_right = 173.0
+margin_bottom = 388.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TigerHuman" type="TextureButton" parent="Control"]
+margin_right = 64.0
+margin_bottom = 128.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Control/TigerHuman"]
+margin_left = 11.0
+margin_right = 523.0
+margin_bottom = 512.0
+rect_scale = Vector2( 0.125, 0.125 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tiger" type="Sprite" parent="Control/TigerHuman"]
+position = Vector2( 40.9931, 94.7765 )
+scale = Vector2( 0.847602, 0.847602 )
+texture = ExtResource( 3 )
+
+[node name="TigerComputer" type="TextureButton" parent="Control"]
+margin_left = 21.0
+margin_right = 85.0
+margin_bottom = 128.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Control/TigerComputer"]
+margin_left = 45.6873
+margin_top = -1.02667
+margin_right = 557.687
+margin_bottom = 510.973
+rect_scale = Vector2( 0.125, 0.125 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Piece" type="TextureRect" parent="Control/TigerComputer"]
+visible = false
+margin_left = 8.0
+margin_top = 72.0
+margin_right = 648.0
+margin_bottom = 712.0
+rect_scale = Vector2( 0.075, 0.075 )
+texture = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GoatHuman" type="TextureButton" parent="Control"]
+margin_top = 128.0
+margin_right = 64.0
+margin_bottom = 256.0
+
+[node name="TextureRect" type="TextureRect" parent="Control/GoatHuman"]
+margin_right = 512.0
+margin_bottom = 512.0
+rect_scale = Vector2( 0.125, 0.125 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Piece" type="TextureRect" parent="Control/GoatHuman"]
+visible = false
+margin_left = 8.0
+margin_top = 72.0
+margin_right = 648.0
+margin_bottom = 712.0
+rect_scale = Vector2( 0.075, 0.075 )
+texture = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GoatComputer" type="TextureButton" parent="Control"]
+margin_left = 64.0
+margin_top = 128.0
+margin_right = 128.0
+margin_bottom = 256.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Control/GoatComputer"]
+margin_right = 512.0
+margin_bottom = 512.0
+rect_scale = Vector2( 0.125, 0.125 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Piece" type="TextureRect" parent="Control/GoatComputer"]
+margin_left = -43.0
+margin_top = 79.0
+margin_right = 597.0
+margin_bottom = 719.0
+rect_scale = Vector2( 0.075, 0.075 )
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NewGame" type="Button" parent="Control"]
+margin_left = -8.0
+margin_top = 320.0
+margin_right = 88.0
+margin_bottom = 340.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "New Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" type="Button" parent="Control"]
+visible = false
+margin_left = -8.0
+margin_top = 272.0
+margin_right = 88.0
+margin_bottom = 292.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_styles/hover = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StopButton" type="Button" parent="Control"]
+visible = false
+margin_left = -7.99999
+margin_top = 272.0
+margin_right = 88.0
+margin_bottom = 292.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_styles/hover = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+text = "Stop"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="newGame" type="Button" parent="."]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 18.292
+margin_top = 343.708
+margin_right = 163.292
+margin_bottom = 374.708
+text = "New Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Control/TigerHuman" to="." method="_on_BlackHuman_pressed"]
+[connection signal="pressed" from="Control/TigerComputer" to="." method="_on_BlackComputer_pressed"]
+[connection signal="pressed" from="Control/GoatHuman" to="." method="_on_WhiteHuman_pressed"]
+[connection signal="pressed" from="Control/GoatComputer" to="." method="_on_WhiteComputer_pressed"]
+[connection signal="pressed" from="Control/NewGame" to="." method="_on_NewGame_pressed"]
+[connection signal="pressed" from="Control/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="Control/StopButton" to="." method="_on_StopButton_pressed"]
+[connection signal="pressed" from="newGame" to="." method="_on_newGame_pressed"]

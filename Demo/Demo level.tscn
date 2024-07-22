@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Demo/DemoAI.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Demo/Player 2.gd" type="Script" id=2]
+[ext_resource path="res://Demo/DragDropPlayer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Demo/Player 1.gd" type="Script" id=4]
+[ext_resource path="res://Demo/dropzone.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Demo/Demo level.gd" type="Script" id=6]
+
+[node name="Demo level" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="dropzone" parent="." instance=ExtResource( 5 )]
+position = Vector2( 420, 220 )
+
+[node name="dropzone2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 570, 220 )
+
+[node name="dropzone3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 720, 220 )
+
+[node name="dropzone4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 420, 370 )
+
+[node name="dropzone5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 568, 370 )
+
+[node name="dropzone6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 720, 370 )
+
+[node name="dropzone7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 420, 520 )
+
+[node name="dropzone8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 570, 520 )
+
+[node name="dropzone9" parent="." instance=ExtResource( 5 )]
+position = Vector2( 720, 520 )
+
+[node name="Tiger" type="Node2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="DragDropPlayer" parent="Tiger" instance=ExtResource( 3 )]
+position = Vector2( 424, 216 )
+
+[node name="DragDropPlayer2" parent="Tiger" instance=ExtResource( 3 )]
+position = Vector2( 424, 520 )
+
+[node name="Goat" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="DemoAI" parent="Goat" instance=ExtResource( 1 )]
+position = Vector2( 720, 520 )
+
+[node name="DemoAI2" parent="Goat" instance=ExtResource( 1 )]
+position = Vector2( 720, 224 )
+[connection signal="dragandfropturnfinished" from="Tiger/DragDropPlayer" to="Goat" method="_on_DragDropPlayer_dragandfropturnfinished"]
+[connection signal="dragandfropturnfinished" from="Tiger/DragDropPlayer2" to="Goat" method="_on_DragDropPlayer2_dragandfropturnfinished"]
+[connection signal="demoaiturnfinished" from="Goat/DemoAI" to="Tiger" method="_on_DemoAI_demoaiturnfinished"]
+[connection signal="demoaiturnfinished" from="Goat/DemoAI2" to="Tiger" method="_on_DemoAI2_demoaiturnfinished"]

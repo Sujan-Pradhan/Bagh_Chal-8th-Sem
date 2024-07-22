@@ -1,0 +1,202 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Main Project/Level/Tiger AI-Goat player  (hard)/Tiger for AI algorithm.gd" type="Script" id=1]
+[ext_resource path="res://Main Project/Level/Tiger AI-Goat player  (hard)/Goat for player (hard).gd" type="Script" id=2]
+[ext_resource path="res://Main Project/Player/Tiger AI (Algorithm).tscn" type="PackedScene" id=3]
+[ext_resource path="res://Main Project/Board/Board.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Lines.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Main Project/HUD.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Main Project/DropZone/dropzone.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Main Project/Player/Goat Player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Main Project/GamePlay Scripts.gd" type="Script" id=9]
+
+[node name="Tiger AI  Algorithm" type="Node2D"]
+script = ExtResource( 9 )
+
+[node name="Board" parent="." instance=ExtResource( 4 )]
+scale = Vector2( 0.784856, 1.00961 )
+
+[node name="HUD" parent="." instance=ExtResource( 6 )]
+position = Vector2( 976, 0 )
+scale = Vector2( 1.15784, 1.02025 )
+
+[node name="Lines" parent="." instance=ExtResource( 5 )]
+
+[node name="Zone1" parent="." instance=ExtResource( 7 )]
+position = Vector2( 200, 100 )
+
+[node name="Zone2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 300, 100 )
+
+[node name="Zone3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 400, 100 )
+
+[node name="Zone4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 500, 100 )
+
+[node name="Zone5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 600, 100 )
+
+[node name="Zone6" parent="." instance=ExtResource( 7 )]
+position = Vector2( 200, 200 )
+
+[node name="Zone7" parent="." instance=ExtResource( 7 )]
+position = Vector2( 300, 200 )
+
+[node name="Zone8" parent="." instance=ExtResource( 7 )]
+position = Vector2( 400, 200 )
+
+[node name="Zone9" parent="." instance=ExtResource( 7 )]
+position = Vector2( 500, 200 )
+
+[node name="Zone10" parent="." instance=ExtResource( 7 )]
+position = Vector2( 600, 200 )
+
+[node name="Zone11" parent="." instance=ExtResource( 7 )]
+position = Vector2( 200, 300 )
+
+[node name="Zone12" parent="." instance=ExtResource( 7 )]
+position = Vector2( 300, 300 )
+
+[node name="Zone13" parent="." instance=ExtResource( 7 )]
+position = Vector2( 400, 300 )
+
+[node name="Zone14" parent="." instance=ExtResource( 7 )]
+position = Vector2( 500, 300 )
+
+[node name="Zone15" parent="." instance=ExtResource( 7 )]
+position = Vector2( 600, 300 )
+
+[node name="Zone16" parent="." instance=ExtResource( 7 )]
+position = Vector2( 200, 400 )
+
+[node name="Zone17" parent="." instance=ExtResource( 7 )]
+position = Vector2( 300, 400 )
+
+[node name="Zone18" parent="." instance=ExtResource( 7 )]
+position = Vector2( 400, 400 )
+
+[node name="Zone19" parent="." instance=ExtResource( 7 )]
+position = Vector2( 500, 400 )
+
+[node name="Zone20" parent="." instance=ExtResource( 7 )]
+position = Vector2( 600, 400 )
+
+[node name="Zone21" parent="." instance=ExtResource( 7 )]
+position = Vector2( 200, 500 )
+
+[node name="Zone22" parent="." instance=ExtResource( 7 )]
+position = Vector2( 300, 500 )
+
+[node name="Zone23" parent="." instance=ExtResource( 7 )]
+position = Vector2( 400, 500 )
+
+[node name="Zone24" parent="." instance=ExtResource( 7 )]
+position = Vector2( 500, 500 )
+
+[node name="Zone25" parent="." instance=ExtResource( 7 )]
+position = Vector2( 600, 500 )
+
+[node name="Tiger" type="Node2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="Tiger AI (Algorithm)" parent="Tiger" instance=ExtResource( 3 )]
+position = Vector2( 200, 100 )
+
+[node name="Tiger AI (Algorithm)2" parent="Tiger" instance=ExtResource( 3 )]
+position = Vector2( 600, 100 )
+
+[node name="Tiger AI (Algorithm)3" parent="Tiger" instance=ExtResource( 3 )]
+position = Vector2( 200, 500 )
+
+[node name="Tiger AI (Algorithm)4" parent="Tiger" instance=ExtResource( 3 )]
+position = Vector2( 600, 500 )
+
+[node name="Goat" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Goat AI" parent="Goat" instance=ExtResource( 8 )]
+position = Vector2( 776, 96 )
+input_pickable = true
+
+[node name="Goat AI2" parent="Goat" instance=ExtResource( 8 )]
+position = Vector2( 888, 40 )
+input_pickable = true
+
+[node name="Goat AI3" parent="Goat" instance=ExtResource( 8 )]
+position = Vector2( 888, 152 )
+
+[node name="Goat AI4" parent="Goat" instance=ExtResource( 8 )]
+position = Vector2( 800, 240 )
+
+[node name="Goat AI5" parent="Goat" instance=ExtResource( 8 )]
+position = Vector2( 880, 312 )
+
+[node name="Goat AI6" parent="Goat" instance=ExtResource( 8 )]
+position = Vector2( 800, 408 )
+
+[node name="Goat AI7" parent="Goat" instance=ExtResource( 8 )]
+position = Vector2( 880, 480 )
+
+[node name="Goat AI8" parent="Goat" instance=ExtResource( 8 )]
+position = Vector2( 800, 560 )
+
+[node name="Goat AI9" parent="Goat" instance=ExtResource( 8 )]
+position = Vector2( 880, 616 )
+
+[node name="Goat AI10" parent="Goat" instance=ExtResource( 8 )]
+position = Vector2( 704, 608 )
+
+[node name="Goat AI11" parent="Goat" instance=ExtResource( 8 )]
+position = Vector2( 568, 608 )
+
+[node name="Goat AI12" parent="Goat" instance=ExtResource( 8 )]
+position = Vector2( 448, 600 )
+
+[node name="Goat AI13" parent="Goat" instance=ExtResource( 8 )]
+position = Vector2( 352, 608 )
+
+[node name="Goat AI14" parent="Goat" instance=ExtResource( 8 )]
+position = Vector2( 112, 592 )
+
+[node name="Goat AI15" parent="Goat" instance=ExtResource( 8 )]
+position = Vector2( 224, 600 )
+
+[node name="Goat AI16" parent="Goat" instance=ExtResource( 8 )]
+position = Vector2( 64, 496 )
+
+[node name="Goat AI17" parent="Goat" instance=ExtResource( 8 )]
+position = Vector2( 64, 384 )
+
+[node name="Goat AI18" parent="Goat" instance=ExtResource( 8 )]
+position = Vector2( 64, 280 )
+
+[node name="Goat AI19" parent="Goat" instance=ExtResource( 8 )]
+position = Vector2( 64, 168 )
+
+[node name="Goat AI20" parent="Goat" instance=ExtResource( 8 )]
+position = Vector2( 64, 56 )
+[connection signal="dragandfropturnfinished" from="Tiger/Tiger AI (Algorithm)" to="Goat" method="_on_Tiger_AI_Algorithm_dragandfropturnfinished"]
+[connection signal="dragandfropturnfinished" from="Tiger/Tiger AI (Algorithm)2" to="Goat" method="_on_Tiger_AI_Algorithm2_dragandfropturnfinished"]
+[connection signal="dragandfropturnfinished" from="Tiger/Tiger AI (Algorithm)3" to="Goat" method="_on_Tiger_AI_Algorithm3_dragandfropturnfinished"]
+[connection signal="dragandfropturnfinished" from="Tiger/Tiger AI (Algorithm)4" to="Goat" method="_on_Tiger_AI_Algorithm4_dragandfropturnfinished"]
+[connection signal="demoaiturnfinished" from="Goat/Goat AI" to="Tiger" method="_on_Goat_AI_demoaiturnfinished"]
+[connection signal="demoaiturnfinished" from="Goat/Goat AI2" to="Tiger" method="_on_Goat_AI2_demoaiturnfinished"]
+[connection signal="demoaiturnfinished" from="Goat/Goat AI3" to="Tiger" method="_on_Goat_AI3_demoaiturnfinished"]
+[connection signal="demoaiturnfinished" from="Goat/Goat AI4" to="Tiger" method="_on_Goat_AI4_demoaiturnfinished"]
+[connection signal="demoaiturnfinished" from="Goat/Goat AI5" to="Tiger" method="_on_Goat_AI5_demoaiturnfinished"]
+[connection signal="demoaiturnfinished" from="Goat/Goat AI6" to="Tiger" method="_on_Goat_AI6_demoaiturnfinished"]
+[connection signal="demoaiturnfinished" from="Goat/Goat AI7" to="Tiger" method="_on_Goat_AI7_demoaiturnfinished"]
+[connection signal="demoaiturnfinished" from="Goat/Goat AI8" to="Tiger" method="_on_Goat_AI8_demoaiturnfinished"]
+[connection signal="demoaiturnfinished" from="Goat/Goat AI9" to="Tiger" method="_on_Goat_AI9_demoaiturnfinished"]
+[connection signal="demoaiturnfinished" from="Goat/Goat AI10" to="Tiger" method="_on_Goat_AI10_demoaiturnfinished"]
+[connection signal="demoaiturnfinished" from="Goat/Goat AI11" to="Tiger" method="_on_Goat_AI11_demoaiturnfinished"]
+[connection signal="demoaiturnfinished" from="Goat/Goat AI12" to="Tiger" method="_on_Goat_AI12_demoaiturnfinished"]
+[connection signal="demoaiturnfinished" from="Goat/Goat AI13" to="Tiger" method="_on_Goat_AI13_demoaiturnfinished"]
+[connection signal="demoaiturnfinished" from="Goat/Goat AI14" to="Tiger" method="_on_Goat_AI14_demoaiturnfinished"]
+[connection signal="demoaiturnfinished" from="Goat/Goat AI15" to="Tiger" method="_on_Goat_AI15_demoaiturnfinished"]
+[connection signal="demoaiturnfinished" from="Goat/Goat AI16" to="Tiger" method="_on_Goat_AI16_demoaiturnfinished"]
+[connection signal="demoaiturnfinished" from="Goat/Goat AI17" to="Tiger" method="_on_Goat_AI17_demoaiturnfinished"]
+[connection signal="demoaiturnfinished" from="Goat/Goat AI18" to="Tiger" method="_on_Goat_AI18_demoaiturnfinished"]
+[connection signal="demoaiturnfinished" from="Goat/Goat AI19" to="Tiger" method="_on_Goat_AI19_demoaiturnfinished"]
+[connection signal="demoaiturnfinished" from="Goat/Goat AI20" to="Tiger" method="_on_Goat_AI20_demoaiturnfinished"]

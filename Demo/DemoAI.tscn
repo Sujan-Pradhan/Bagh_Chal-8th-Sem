@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Images/goat.png" type="Texture" id=1]
+[ext_resource path="res://Demo/DemoAI.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 32, 32 )
+
+[node name="DemoAI" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape2DForPlayer" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="goat" type="Sprite" parent="."]
+scale = Vector2( 0.125, 0.125 )
+texture = ExtResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="goat"]
+scale = Vector2( 8, 8 )
+
+[node name="CollisionShape2DForArea" type="CollisionShape2D" parent="goat/Area2D"]
+shape = SubResource( 2 )
+
+[node name="RayCastDown" type="RayCast2D" parent="."]
+enabled = true
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+rotation = -1.56205
+enabled = true
+
+[node name="RayCastUp" type="RayCast2D" parent="."]
+rotation = 3.14017
+enabled = true
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+rotation = 1.56534
+enabled = true
+[connection signal="input_event" from="goat/Area2D" to="." method="_on_Area2D_input_event"]

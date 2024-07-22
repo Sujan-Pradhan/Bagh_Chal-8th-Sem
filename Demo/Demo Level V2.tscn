@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Demo/DemoAI.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Demo/Demo Player V2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Demo/Demo Level V2.gd" type="Script" id=3]
+
+[node name="Demo Level V2" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Demo Player V2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 176, 144 )
+
+[node name="DemoAI" parent="." instance=ExtResource( 1 )]
+position = Vector2( 944, 432 )
+[connection signal="endturn" from="Demo Player V2" to="DemoAI" method="_on_Demo_Player_V2_endturn"]
+[connection signal="demoaiturnfinished" from="DemoAI" to="Demo Player V2" method="_on_DemoAI_demoaiturnfinished"]
